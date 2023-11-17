@@ -10,57 +10,6 @@ const myCallbackFunc = (mutations) => {
     if (link.getAttribute('href') === '/SkylineBNR334' && getComputedStyle(link.parentElement).display === 'flex' && link.children.length === 4) {
       link.setAttribute('href', '/tani_exe');
 
-      // console.log(link.querySelectorAll('img'))
-
-      // link.style.border = 'solid 3px red';
-      // let currentParent = link.parentElement;
-      // let parentCount = 0;
-      // while (currentParent && parentCount < 10) {
-      //   currentParent.style.border = 'solid 1px black';
-      //   currentParent = currentParent.parentElement;
-      //   parentCount++;
-      // }
-
-      // let parent = link.parentElement;
-      // for (let i = 0; i < 15 && parent; i++) {
-      //   if (parent.tagName === 'UL') {
-      //     parent.style.border = 'solid 3px red';
-      //     break;
-      //   }
-      //   parent = parent.parentElement;
-      // }
-
-      // let parent = link.parentElement;
-      // for (let i = 0; i < 15 && parent; i++) {
-      //   if (parent.tagName === 'UL') {
-      //     // ULタグの最初の子要素に対してスタイルを適用
-      //     if (parent.firstChild) {
-      //       parent.firstChild.style.border = 'solid 3px blue';
-      //     }
-      //     break;
-      //   }
-      //   parent = parent.parentElement;
-      // }
-
-      // let parent = link.parentElement;
-      // for (let i = 0; i < 15 && parent; i++) {
-      //   if (parent.tagName === 'UL') {
-      //     // ULタグの子要素が1個の場合はsolid 3px redにする
-      //     if (parent.children.length === 1) {
-      //       parent.style.border = 'solid 3px red';
-      //     } else {
-      //       // ULタグの子要素が2個以上の場合、a要素を含むものは solid 3px red にする
-      //       Array.from(parent.children).forEach((child) => {
-      //         if (child.contains(link)) {
-      //           parent.style.border = 'solid 3px red';
-      //         }
-      //       });
-      //     }
-      //     break;
-      //   }
-      //   parent = parent.parentElement;
-      // }
-
       // 親を15回まで遡り、最初に見つかったulタグに対してスタイルを適用する
       let parent = link.parentElement;
       for (let i = 0; i < 15 && parent; i++) {
