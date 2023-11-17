@@ -1,0 +1,12 @@
+{
+  "name": "hide-lije",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "特定ユーザーのいいねを隠す",
+  "content_scripts": [{
+    "matches": ["https://twitter.com/notifications"],
+    "js": [
+      "content.js"
+    ]
+  }]
+}
