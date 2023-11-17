@@ -8,5 +8,12 @@
     "js": [
       "content.js"
     ]
-  }]
+  }],
+  "permissions": [
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Title Capture",
+    "default_popup": "popup.html"
+  }
 }

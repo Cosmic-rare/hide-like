@@ -1,3 +1,9 @@
+let user_id = ''
+
+chrome.storage.local.get('key', function (value) {
+  user_id = value.key 
+});
+
 const myCallbackFunc = (mutations) => {
   // すべてのaタグを取得
   var allLinks = document.querySelectorAll('a');
@@ -5,7 +11,7 @@ const myCallbackFunc = (mutations) => {
   // 各リンクに対して処理を行う
   allLinks.forEach(function(link) {
     // href属性が"/SkylineBNR334"の場合に"/tani_exe"に書き換える
-    if (link.getAttribute('href') === '/SkylineBNR334' && getComputedStyle(link.parentElement).display === 'flex' && link.children.length === 4) {
+    if (link.getAttribute('href') === '/' + user_id && getComputedStyle(link.parentElement).display === 'flex' && link.children.length === 4) {
 
       // 親を15回まで遡り、最初に見つかったulタグに対してスタイルを適用する
       let parent = link.parentElement;
